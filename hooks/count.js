@@ -9,7 +9,6 @@ function useCount() {
   const [loopCount, setLoopCount] = useState(0);
   const [Clear, setClear] = useState(false);
 
-
   const loadSound = async () => {
     try {
       const soundObj = new Audio.Sound();
@@ -32,7 +31,7 @@ function useCount() {
     let countTime = 5;
     const count = setInterval(() => {
       const difference = countTime--;
-    console.log(difference)
+      console.log(difference);
       setCountdown(difference);
 
       if (difference <= 0) {
@@ -54,13 +53,23 @@ function useCount() {
 
   const loopstate = () => {
     setLoopCount((prev) => prev + 1);
-    console.log(loopCount,'loop function')
+    console.log(loopCount, "loop function");
   };
 
-  const clearTimer= () => {
-    setClear(true)
-  }
-  return { fiveCount, loadSound, countdown, truePaused, isPaused, loopstate,loopCount,clearTimer,Clear };
+  const clearTimer = () => {
+    setClear(true);
+  };
+  return {
+    fiveCount,
+    loadSound,
+    countdown,
+    truePaused,
+    isPaused,
+    loopstate,
+    loopCount,
+    clearTimer,
+    Clear,
+  };
 }
 
 export default useCount;
