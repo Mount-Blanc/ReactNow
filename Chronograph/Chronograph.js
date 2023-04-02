@@ -51,12 +51,12 @@ function Chronograph () {
 <Text style={styles.Title}>Rest:</Text>
 
         <Picker onValueChange={(value) => setSelectedRest(value)}>
-          <Picker.Item label='10 second' value="10"/>
-          <Picker.Item label='20 second' value="20"/>
-          <Picker.Item label='30 second' value="30"/>
-          <Picker.Item label='40 second' value="40"/>
-          <Picker.Item label='50 second' value="50"/>
-          <Picker.Item label='60 second' value="60"/>
+          <Picker.Item label='10 seconds' value="10"/>
+          <Picker.Item label='20 seconds' value="20"/>
+          <Picker.Item label='30 seconds' value="30"/>
+          <Picker.Item label='40 seconds' value="40"/>
+          <Picker.Item label='50 seconds' value="50"/>
+          <Picker.Item label='60 seconds' value="60"/>
 
 
         </Picker>
