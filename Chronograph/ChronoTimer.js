@@ -9,7 +9,7 @@ function ChronoTimer({ intervalValue, restValue }) {
   const [timerType, setTimerType] = useState("interval");
 const {startTimer,secondsRemaining,setSeconds,setrest,setinterval,stopTimer,round,} = useTimer()
 
-  useEffect(() => {
+   useEffect(() => {
     setinterval(intervalValue * 60 )
     console.log(restValue,'this is restvalue on useEffect')
     setrest(restValue)
@@ -17,14 +17,14 @@ const {startTimer,secondsRemaining,setSeconds,setrest,setinterval,stopTimer,roun
   },[intervalValue,restValue])
   const handleStart = () => {
     setTimerRunning(true);   
-    setSeconds(intervalValue * 60)
+    setSeconds(intervalValue* 60)
     setinterval(intervalValue)
     setrest(restValue)
     
     startTimer()
-  };
+  }; 
 
-  const handleStop = () => {
+   const handleStop = () => {
     setTimerRunning(false);
     stopTimer()
     console.log(secondsRemaining)
@@ -61,7 +61,7 @@ const {startTimer,secondsRemaining,setSeconds,setrest,setinterval,stopTimer,roun
       marginRight:40,
       marginLeft:40
     },
-  });
+  }); 
   
 
   return (
@@ -75,9 +75,8 @@ const {startTimer,secondsRemaining,setSeconds,setrest,setinterval,stopTimer,roun
           <Text style={styles.Text}>Start</Text>
         </Pressable>
       )}
-
       {timerRunning && <Button title="Stop" onPress={handleStop} color="red" />}
-    </View>
+    </View> 
   );
 }
 export default ChronoTimer;

@@ -74,10 +74,11 @@ if (round < 3) {
                  handlestopSound()
 
               }
-              console.log(timerType)
+              console.log(timerType,"between checks")
               if ( timerType == "rest") {
                  setTimerType("interval")
-                 setSecondsRemaining(intervalminutes)
+                 console.log("this is inside rest interval check",intervalminutes)
+                 setSecondsRemaining(intervalminutes *60)
                   setround((prev) => prev + 1)
                 handlestartSound()
               }
